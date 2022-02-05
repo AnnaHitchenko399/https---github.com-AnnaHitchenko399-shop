@@ -12,18 +12,71 @@
             <img class="symbol" src="Combined-Shape.svg">
             <span class="text"> Магазин </span>
             </div>
+            
             <div class="columns">
                 <a class="help" href="help.html"> Помощь </a>
                 <a class="about" href="about.html"> О нас </a>
                 <a class="registration" href="registration.html"> Зарегистрироваться </a>
-            </div> 
-            </div>   
-            </div class="below">
+            </div>
+            
+            <div class="icon"> 
+                <img src="Vector.svg" alt="Корзина">
+                <div class="circle">
+                <div class="amont"></div>
+                  </div>      
+         </div>
+         </div>
+        </div>
+
+            <div class="below">
         <span class="discount"> В течении всего месяца скидка на все товары 50% </span>
         <a class="start" href=start.html> Начать покупки </a>
-        <hr align="line"/>
-       </div>
+        
+        </div>
+      
+        <div>
+        <div class="potter">
+                <img class="book" src="potter.svg" alt="Гарри Потер и филосовский камень">
+                <div class="decor"> Гарри Поттер и <br> филосовский камень</div>
+                <button class="button" onClick="onClick();">В корзину</button>
+              </div>
+
+              <div class="uve">
+                <img class="book" src="uve.svg" alt="Вторая жизнь Уве">
+                <div class="decor">Вторая жизнь Уве</div>
+                <button class="button" onClick="onClick();">В корзину</button>
+              </div>
+            </div>
+
+              <div class="flowers">
+                <img class ="book" src="flowers.svg" alt="Цветы для Элджерона">
+                <div class="decor">Цветы для Элджерона</div>
+                <button class="button" onClick="onClick();">В корзину</button>
+              </div>
+              <div class="osten">
+                <img class="book" src="osten.svg" alt="Гордость и Предубеждение">
+                <div class="decor">Гордость и <br> предубеждение</div>
+                <button class="button" onClick="onClick();">В корзину</button>
+              </div>
+            </div>
         </body>
+            
+            <script>
+            let number = 0;
+            const buttons = document.querySelectorAll(".button");
+            const circle = document.querySelector(".circle");
+            const numberc = document.querySelector(".amont");
+            numberc.textContent = number;
+            for (let index = 0; index < buttons.lenght; index++) {
+                buttons[index].onclick = onClick;
+            }
+
+            function onClick() {
+                circle.style.visiility = "visible";
+                number++;
+                numberc.textContent = number;
+            }
+        </script>
     </html>
 </html>
 
